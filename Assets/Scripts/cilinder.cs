@@ -13,7 +13,7 @@ public class Cilinder : MonoBehaviour
     private float speed;
     void Update()
     {
-        Debug.Log(GetButton("up"));
+        
         
     var buttonW = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
     var buttonA = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
@@ -21,10 +21,10 @@ public class Cilinder : MonoBehaviour
     var buttonD = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
     var speedDelta = speed * Time.deltaTime;
 
-        if (buttonW) Speed(0, 0, speedDelta);
-        if (buttonS) Speed(0, 0, -speedDelta);
-        if (buttonA) Speed(-speedDelta, 0, 0);
-        if (buttonD) Speed(speedDelta, 0,0);
+        if (buttonW) Speed(0, 0, speedDelta);//arriba , eje Z
+        if (buttonS) Speed(0, 0, -speedDelta);//abajo, eje -Z
+        if (buttonA) Speed(-speedDelta, 0, 0);//izquierda, eje -X
+        if (buttonD) Speed(speedDelta, 0,0);//derecha, eje X
     }
 
     //Función para desplazar al objeto, teniendo en cuenta el deltaTime
@@ -35,12 +35,6 @@ public class Cilinder : MonoBehaviour
     //    float space = speed * Time.deltaTime;
     //    transform.Translate(0, 0, space);
     //}
-
-    void GetButton(string boton)
-    {
-        string code = $"KeyCode." + boton;
-       
-    }
     
 
     void Speed(float x,float y,float z)
