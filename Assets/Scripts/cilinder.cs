@@ -4,22 +4,47 @@ using UnityEngine;
 
 public class Cilinder : MonoBehaviour
 {
+    // Permite que una variable privada pueda ser vista y editada desde la consola de unityt
     [SerializeField]
+    // Permite hacer un mouseOver con mensaje a la variable
+    [Tooltip("Velocidad de Movimiento del personaje en m/s")]
+    // Fijar un rango de movimiento
+    [Range(0, 10)]
     private float speed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        Speed();
+        Debug.Log(GetButton("up"));
+        
+    var buttonW = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+    var buttonA = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
+    var buttonS = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+    var buttonD = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
+    var speedDelta = speed * Time.deltaTime;
+
+        if (buttonW) Speed(0, 0, speedDelta);
+        if (buttonS) Speed(0, 0, -speedDelta);
+        if (buttonA) Speed(-speedDelta, 0, 0);
+        if (buttonD) Speed(speedDelta, 0,0);
     }
 
-    void Speed()
+    //Función para desplazar al objeto, teniendo en cuenta el deltaTime
+    // y haciendo que se pueda cambiar el numero desde unity con la variable speed
+
+    //void Speed()
+    //{
+    //    float space = speed * Time.deltaTime;
+    //    transform.Translate(0, 0, space);
+    //}
+
+    void GetButton(string boton)
     {
-        transform.Translate(0, 0, speed);
+        string code = $"KeyCode." + boton;
+       
+    }
+    
+
+    void Speed(float x,float y,float z)
+    {
+        transform.Translate(x, y, z);
     }
 }
