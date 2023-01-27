@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7280229855054659348}
   - component: {fileID: 809883972853076442}
   - component: {fileID: 1047743379118316183}
-  - component: {fileID: 8953573422453133646}
   - component: {fileID: -9104471954475595234}
+  - component: {fileID: -6169341245558524008}
   m_Layer: 0
   m_Name: BALA
   m_TagString: Untagged
@@ -99,20 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8953573422453133646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3032924626904595554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ce8d23eef8b5da42b1578b0b355ed6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dirBala: {x: 0, y: 0, z: 1}
-  velocidad: 0.8
 --- !u!114 &-9104471954475595234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +111,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae1ec388baf5c641950e2fd553eaf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6169341245558524008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3032924626904595554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce8d23eef8b5da42b1578b0b355ed6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: {x: 0, y: 0, z: 1}
+  speed: 1
+  damage: 0

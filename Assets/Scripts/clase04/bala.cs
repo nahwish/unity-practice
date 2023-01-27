@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class bala : MonoBehaviour
 {
- public Vector3 dirBala;
- public float velocidad = 1;
+ public Vector3 direction;
+ public float speed = 1;
+ public float damage;
+
     void Update()
     {
-        // transform.Translate(new Vector3(0,0,1f));
-        transform.Translate(dirBala * velocidad * Time.deltaTime);
+        transform.Translate(direction * speed * Time.deltaTime);
         
     }
 }
