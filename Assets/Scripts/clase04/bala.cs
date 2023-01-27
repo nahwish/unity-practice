@@ -8,7 +8,8 @@ public class bala : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        Move();
         
     }
+    void Move() => transform.Translate(direction * speed * Time.deltaTime);
 }
