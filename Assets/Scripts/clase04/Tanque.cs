@@ -9,9 +9,20 @@ public class Tanque : MonoBehaviour
     void Start()
     {
         
-        Disparo();
 
     }
+    void Update() {
+        Disparo();
+        
+    }
+    void Disparo() {
+        var button = Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.L);
 
-    void Disparo() => Instantiate(bala, balaPosition.position, transform.rotation);
+        if(button){
+        Instantiate(bala, balaPosition.position, transform.rotation );
+
+        }
+    }
+    
+    
 }
