@@ -36,7 +36,7 @@ public class Cilinder : MonoBehaviour
         var buttonD = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
         var speedDelta = speed * Time.deltaTime;
 
-        if (buttonW) Speed(0, 0, speedDelta);//arriba , eje Z
+        if (buttonW) Speed(0, 0, speedDelta);//arriba , eje 
         if (buttonS) Speed(0, 0, -speedDelta);//abajo, eje -Z
         if (buttonA) Speed(-speedDelta, 0, 0);//izquierda, eje -X
         if (buttonD) Speed(speedDelta, 0,0);//derecha, eje X
