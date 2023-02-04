@@ -767,11 +767,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700772454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc4fdd2cdeca3f44492ec994e139adb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f11368c722fc204b813211cdbee1101, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bala: {fileID: 3032924626904595554, guid: f041b84f65cd9d84da3029835da527a0, type: 3}
-  balaPosition: {fileID: 157801113}
+  tiempoRestante: 5
+  tiempoOriginal: 5
 --- !u!1 &2138893250
 GameObject:
   m_ObjectHideFlags: 0
