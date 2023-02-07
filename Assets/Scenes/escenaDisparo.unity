@@ -745,7 +745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1700772454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.566, y: 0.27932996, z: 0.405}
+  m_LocalPosition: {x: -33.651, y: 0.27932996, z: 0.405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -767,11 +767,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1700772454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f11368c722fc204b813211cdbee1101, type: 3}
+  m_Script: {fileID: 11500000, guid: 8aa092b3f77a4ee489e5da18629623d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoRestante: 5
-  tiempoOriginal: 5
+  bala: {fileID: 3032924626904595554, guid: f041b84f65cd9d84da3029835da527a0, type: 3}
+  balaPosition: {fileID: 157801113}
+  tiempoOriginal: 1
+  tiempoRestante: 2
 --- !u!1 &2138893250
 GameObject:
   m_ObjectHideFlags: 0

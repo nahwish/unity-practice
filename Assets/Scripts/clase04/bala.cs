@@ -9,6 +9,6 @@ public class bala : MonoBehaviour
     void Update()
     {
         transform.Translate(direction * speed * Time.deltaTime);
-        
+       
     }
 }
