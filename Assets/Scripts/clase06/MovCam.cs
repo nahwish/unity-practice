@@ -4,11 +4,6 @@ public class MovCam : MonoBehaviour
 {
     public float tiempoRestante;
     public float tiempoOriginal;
-    void Start()
-    {
-        
-    }
-
    
     void Update()
     {
