@@ -25,7 +25,7 @@ public class MovimientoPlayer2 : MonoBehaviour
 
         // Velocidad de movimiento estándar.
         float movimientoStandar = 15f;
-        Debug.Log(horizontal);
+      
         // Crea un vector de movimiento para el objeto.
         Vector3 movimientoJugador = new Vector3(horizontal,0,vertical);
 
