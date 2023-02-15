@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public GameObject objeto1;
-    public GameObject objeto2;
+    [SerializeField]
+    [Tooltip("Objeto a cual seguir")]
+    private GameObject objeto1;
+    [SerializeField]
+    [Tooltip("Objeto que lo seguirá")]
+    private GameObject objeto2;
 
     void Update(){
         MovePlayer();
