@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class Look : MonoBehaviour
 {
-    public Transform target; // El objeto que queremos seguir
-    public float speed = 0.1f; // La velocidad de seguimiento
+    [Tooltip("Script que tiene el método 'LookPlayer' para seguirlo con la vista")]
+    [SerializeField]
+    private LookAndFollow standardLookAt;
+    [Space]
+    [Space]
+    [Tooltip("Objeto al cual queremos seguir con la mirada")]
+    [SerializeField]
+    private Transform objectToLookAt; 
+    [Tooltip("Objeto que lo va a seguir con la vista")]
+    [SerializeField]
+    private Transform lookingObject; 
+
 
     void Update()
     {
-        // Calcular la posición deseada para el objeto que sigue
-        Vector3 desiredPosition = target.position;
-        // Hacer que el objeto mire hacia el objeto que se está siguiendo
-        transform.LookAt(target);
+        standardLookAt.LookPlayer(objectToLookAt,lookingObject);
     }
 }
-// Ejemplo 1 usando quaternion 
-// private void LookQuaternion(){
-//         Quaternion rot = Quaternion.LookRotation(objeto1.transform.position - objeto2.transform.position);
-//         objeto2.transform.rotation = rot;
-//    }
-//Ejemplo 2 usando LookAt
-//  private void LookPlayer(){
-//         objeto2.transform.LookAt(objeto1.transform.position);
-//    }
+
+ 

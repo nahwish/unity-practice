@@ -3,30 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Enemies{
-    Enemy1,Enemy2
+    Follow,Look
 }
-
-
 
 public class Enums : MonoBehaviour
 {
-    
-    public Enemies enemies;
+   
+    [SerializeField]
+    private Enemies optionSelected;
+    [Tooltip("SCRIPT QUE TIENE EL MÉTODO MoveTowardsTarget PARA SEGUIR Y LookPlayer PARA MIRAR A UNA OBJETO")]
+    public LookAndFollow LookAndFollowController;
+    [Space]
+    [Space]
+    [SerializeField]
+    [Tooltip("OBJETO AL CUAL SEGUIR")]
+    private Transform objectToFollow;
+    [SerializeField]
+    [Tooltip("OBJETO QUE LO SEGUIRÁ")]
+    private Transform objectThatWillFollow;
+    [Space]
+    [Space]
+    [Tooltip("SELECCIONAR LA DISTANCIA A LA CUAL SE DETENDRÁ")]
+    [SerializeField]
+    private float selectDistance;
+    [Tooltip("SELECCIONAR LA VELOCIDAD DE PERSECUSIÓN")]
+    [SerializeField]
+    private float selectSpeed = 5;
 
+   
     void Update()
     {
-        switch (enemies)
+        switch (optionSelected)
         {
-            case Enemies.Enemy1:
-                Debug.Log("Enemigo uno");
+            case Enemies.Follow:
+                 LookAndFollowController.MoveTowardsTarget(objectThatWillFollow.transform, objectToFollow.transform, selectDistance,selectSpeed);
+                 LookAndFollowController.LookPlayer(objectToFollow,objectThatWillFollow);               
             break;
-            case Enemies.Enemy2:
-                Debug.Log("Enemigo dos");
+            case Enemies.Look:
+                 LookAndFollowController.LookPlayer(objectToFollow,objectThatWillFollow);                
             break;
             default:
             Debug.Log("nada");
             break;
         }
-        
     }
 }

@@ -8,11 +8,11 @@ public class Rotation : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+            this.transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+            this.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
     }
 }
